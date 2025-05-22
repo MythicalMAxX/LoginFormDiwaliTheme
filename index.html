@@ -39,6 +39,7 @@ body {
   box-shadow: 2px 2px 100px #0e032f
   -2px -2px 100px #0a0222;
   backdrop-filter: blur(3px);
+  animation: fadeIn 1s ease-in-out;
 }
 
 h3 {
@@ -58,6 +59,11 @@ h3 {
   outline: none;
   border-style: none;
   border: 1px solid #5f3dc4;
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+.password {
+  animation-delay: 0.2s; /* Add a slight delay for the password field */
 }
 
 input::placeholder {
@@ -126,6 +132,26 @@ a:hover {
 
 .button-box a:hover {
   opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
     </style>
   </head>
